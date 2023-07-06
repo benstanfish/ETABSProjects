@@ -1,21 +1,21 @@
-# API calls return 0 when the program responds properly.
-
 # Import the library that will allow us to grab CSi Objects
 import comtypes.client
 
-# Create list of dummy names required for interacting with model. Use the C# documentation (despite this being Python)
-NumberNames = 0
-MyName = []
-
 # Get the active ETABS process
+# The ETABSObject is a cOAPI object, refer to documentation
 ETABSObject = comtypes.client.GetActiveObject("CSI.ETABS.API.ETABSObject")
 
 # Get the open ETABS model. This is a cSapModel object.
 SapModel = ETABSObject.SapModel
 
+# API calls return 0 when the program responds properly.
 # Make sure the model is unlocked, otherwise commands may not work. This is also a good way to test that you have
 # control of the model.
 SapModel.SetModelIsLocked(False)
+
+# Create list of dummy names required for interacting with model. Use the C# documentation (despite this being Python)
+NumberNames = 0
+MyName = []
 
 # Set the present units of the project. Refer to eUnits enumeration
 kip_in_F = 4
