@@ -62,8 +62,8 @@ BubbleLocY = []         #14
 grid_system_data = SapModel.GridSys.GetGridSys_2(grid_system_names[0], Xo, Yo, RZ, GridSysType, NumXLines, NumYLines, GridLineIDX,
                                     GridLineIDY, OrdinateX, OrdinateY,VisibleX,VisibleY,BubbleLocX,BubbleLocY)
 
-
 # Note that the SetGridSys method actually adds a new Grid System to the model.
+
 
 
 # Let's deal with point objects
@@ -99,3 +99,4 @@ MergeNumber = 0
 new_point = SapModel.PointObj.AddCartesian(2,2,50,Name='777',UserName="u777",CSys="Global",MergeOff=False,MergeNumber=0)
 new_point_unique = new_point[0]
 new_point_success = new_point[1]     # Will be 0 if operation successful
+
