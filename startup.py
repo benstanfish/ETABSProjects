@@ -17,3 +17,5 @@ SapModel = ETABSObject.SapModel
 # Make sure the model is unlocked, otherwise commands may not work.
 # This is also a good way to test that you have control of the model.
 SapModel.SetModelIsLocked(False)
+
+print("import complete")
